@@ -43,6 +43,10 @@ Park.prototype.checkMostVisitedDino = function () {
 // this in the variable set outside the loop. Line 32 compares, but does not return the WHOLE OBJECT
 // saving the dinosaur object in dinosaurToReturn and then returning this will give the whole object
 
+Park.prototype.findDinoSpecies = function(type) {
+  const dinoBySpecies = this.dinosaurs.filter(dino => dino.species === type);
+  return dinoBySpecies
+};
 
 
 module.exports = Park;
