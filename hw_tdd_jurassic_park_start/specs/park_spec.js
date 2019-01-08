@@ -92,6 +92,14 @@ describe('Park', function() {
     assert.strictEqual(actual, expected);
   });
 
-  it('should calculate the total revenue from ticket sales for one year ')
+  it('should calculate the total revenue from ticket sales for one year', function(){
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    park.addDinosaur(dinosaur4);
+    const expected = 1533000;
+    actual = park.yearlyRevenue();
+    assert.strictEqual(actual, expected);
+  });
 
 });

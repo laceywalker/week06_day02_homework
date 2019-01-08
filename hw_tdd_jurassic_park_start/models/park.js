@@ -69,8 +69,16 @@ Park.prototype.numberOfYearlyVisitors = function () {
 };
 
 // use the previous function and then multiply by days of the year. COULD ALSO:
-// assign it in a variable and then return the variable -- 
+// assign it in a variable and then return the variable --
 // yearlyVisitors = this.numberOfDailyVisitors() * 365;
 // return yearlyVisitors;
+
+Park.prototype.yearlyRevenue = function () {
+  return this.numberOfYearlyVisitors() * this.ticketPrice;
+};
+
+// don't forget to add the dinosaurs to each test otherwise there will be nothing to check!
+// take the yearly visitors from the numberOfYearlyVisitors function and then multiply by the 
+// property ticketPrice
 
 module.exports = Park;
