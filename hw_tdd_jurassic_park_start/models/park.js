@@ -52,6 +52,19 @@ Park.prototype.findDinoSpecies = function(type) {
 // list of dinosaurs which is then filtered by type, which only brings back the type which matches the argument
 // passed in through the test. then return this new array
 
+Park.prototype.numberOfDailyVisitors = function () {
+  let totalVisitors = 0
+  for (let dinosaur of this.dinosaurs) {
+    totalVisitors += dinosaur.guestsAttractedPerDay
+  }
+    return totalVisitors
+};
+
+// create a variable as a counter set to 0. must be outside the loop so it is visible/scoped.
+// loop through the dinosaurs array and add the property guestsAttractedPerDay to the total
+// visitors. then return the totalvisitors variable
+
+
 
 
 

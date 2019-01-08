@@ -72,7 +72,15 @@ describe('Park', function() {
 
 // need to remember to put the argument 'aerodactyl' as this is a specific example to check against!
 
-  it('should calculate the total number of visitors per day');
+  it('should calculate the total number of visitors per day', function() {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.addDinosaur(dinosaur3);
+    park.addDinosaur(dinosaur4);
+    const expected = 420;
+    const actual = park.numberOfDailyVisitors();
+    assert.strictEqual(actual, expected);
+  });
 
   it('should calculate the total number of visitors per year');
 
