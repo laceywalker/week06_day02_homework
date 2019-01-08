@@ -64,8 +64,13 @@ Park.prototype.numberOfDailyVisitors = function () {
 // loop through the dinosaurs array and add the property guestsAttractedPerDay to the total
 // visitors. then return the totalvisitors variable
 
+Park.prototype.numberOfYearlyVisitors = function () {
+  return this.numberOfDailyVisitors() * 365;
+};
 
-
-
+// use the previous function and then multiply by days of the year. COULD ALSO:
+// assign it in a variable and then return the variable -- 
+// yearlyVisitors = this.numberOfDailyVisitors() * 365;
+// return yearlyVisitors;
 
 module.exports = Park;
