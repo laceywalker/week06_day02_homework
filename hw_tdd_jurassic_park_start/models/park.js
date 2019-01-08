@@ -48,5 +48,11 @@ Park.prototype.findDinoSpecies = function(type) {
   return dinoBySpecies
 };
 
+// similar to the FILTER function as used previously in this file - copy and create a new array of the
+// list of dinosaurs which is then filtered by type, which only brings back the type which matches the argument
+// passed in through the test. then return this new array
+
+
+
 
 module.exports = Park;
