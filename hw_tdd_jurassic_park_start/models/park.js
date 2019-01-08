@@ -24,7 +24,24 @@ Park.prototype.removeDinosaur = function (dinosaurToRemove) {
 // and OMIT (not remove) the object whose .species propery matches the object.species which is
 // passed in.
 
+Park.prototype.checkMostVisitedDino = function () {
+  let numberOfVisitors = 0
+  let dinosaurToReturn = null
+  for (let dinosaur of this.dinosaurs) {
+    if (numberOfVisitors < dinosaur.guestsAttractedPerDay) {
+      numberOfVisitors = dinosaur.guestsAttractedPerDay
+      dinosaurToReturn = dinosaur
+    }
+  }
+  return dinosaurToReturn;
+};
 
+// set an intial value in a variable to 0 (use LET so variable is visible, must be outside the loop or
+// will ONLY be in the scope of the loop). Then create an if statement which compares this variable
+// against the property guestsAttractedPerDay. As it is looping, it will check
+// if each element-object has a higher guestsAttractedPerDay than the previous object. It will then store
+// this in the variable set outside the loop. Line 32 compares, but does not return the WHOLE OBJECT
+// saving the dinosaur object in dinosaurToReturn and then returning this will give the whole object
 
 
 
